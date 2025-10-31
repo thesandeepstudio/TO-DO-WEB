@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO-DO</title>
+
+    <!-- Links -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- style Links -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>TODO LIST</h1>
+
+      <div class="header">
+        <div class="search-container">
+          <svg
+            class="search-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="#6c63ff"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" placeholder="Search note..." />
+        </div>
+
+        <div class="note-dropdown">
+          <select name="note" id="notes">
+            <option value="all">All</option>
+            <option value="complete">Complete</option>
+            <option value="to-do">To-Do</option>
+            <option value="archive">Archive</option>
+          </select>
+        </div>
+
+        <div class="toggle">
+          <button><i class="fa-solid fa-moon"></i></button>
+        </div>
+      </div>
+
+      <!-- New Task Here -->
+      <div class="new-task-list">
+        <input type="text" id="new-task" placeholder="Enter new Task..." />
+        <div class="popup-btn">
+          <button id="save-task">Add</button>
+          <button id="cancel-task">Cancel</button>
+        </div>
+      </div>
+
+      <!-- New task Add icon -->
+      <div class="add-task">
+        <button id="add-task-btn"><i class="fa-solid fa-plus"> </i></button>
+      </div>
+    </div>
+
+    <!-- Script file -->
+    <script src="script.js"></script>
+  </body>
+</html>

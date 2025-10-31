@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #fff;
+  color: #222;
+
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  min-height: 100vh;
+  padding-top: 40px;
+}
+.container {
+  position: relative;
+  background-color: #f9f9f9;
+  width: 70%;
+  max-width: 600px;
+  padding: 10px 30px 700px 30px;
+  border-radius: 10px;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-container {
+  position: relative;
+  flex: 1;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 10px 1px 10px 45px;
+  border: 2px solid #6c63ff;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-container input:focus {
+  border-color: #4e48c7;
+}
+
+.search-container input::placeholder {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #cccae8;
+}
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  pointer-events: none;
+  color: #6c63ff;
+}
+
+.note-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.note-dropdown select {
+  padding: 10px 40px 10px 12px; /* space for arrow on right */
+  border: none;
+  background-color: #6c63ff;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 1rem;
+  appearance: none; /* remove default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+/* Add the vertical line before the arrow */
+.note-dropdown::before {
+  content: "|";
+  position: absolute;
+  right: 25px; /* adjust distance from the edge */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff; /* light vertical line */
+  font-weight: normal;
+  pointer-events: none;
+  font-size: 1.2rem;
+}
+
+/* Custom arrow */
+.note-dropdown::after {
+  content: "\25BC"; /* ▼ */
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.note-dropdown select option {
+  background-color: #fff; /* dropdown background */
+  color: #333; /* text color */
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  padding: 5px 10px;
+}
+
+.toggle button {
+  background-color: #6c63ff;
+  border: none;
+  border-radius: 6px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.add-task {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  margin-top: 20px;
+}
+
+.add-task button {
+  font-size: 1rem;
+  background-color: #6c63ff;
+  border: none;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.new-task-list {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 400px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  flex-direction: column;
+  gap: 10px;
+  z-index: 100;
+}
+.new-task-list input {
+  width: 100%;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.new-task-list input:focus {
+  border-color: #4e48c7;
+}
+
+.new-task-list input::placeholder {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #cccae8;
+}
+
+.popup-btn {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.popup-btn button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#save-task {
+  background-color: #6c63ff;
+  color: white;
+}
+
+#cancel-task {
+  background-color: #ddd;
+  color: 333;
+}
+
+.popup-btn button:hover {
+  opacity: 0.8;
+}
